@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/k32ar/Projects/K/build",
+  "command": "/usr/bin/gcc-10   -g   -std=gnu11 -o CMakeFiles/K.dir/src/main.c.o   -c /home/k32ar/Projects/K/src/main.c",
+  "file": "/home/k32ar/Projects/K/src/main.c"
+}
+]
