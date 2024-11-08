@@ -1,7 +1,8 @@
 [
 {
   "directory": "/home/k32ar/Projects/K/build",
-  "command": "/usr/bin/gcc-10   -g   -std=gnu11 -o CMakeFiles/K.dir/src/main.c.o   -c /home/k32ar/Projects/K/src/main.c",
-  "file": "/home/k32ar/Projects/K/src/main.c"
+  "command": "/usr/bin/gcc -g -std=gnu11 -Wall -Wextra -pedantic -Wno-unused-variable -Wno-unused-parameter -Wno-unused-function -o CMakeFiles/K.dir/src/main.c.o -c /home/k32ar/Projects/K/src/main.c",
+  "file": "/home/k32ar/Projects/K/src/main.c",
+  "output": "CMakeFiles/K.dir/src/main.c.o"
 }
 ]

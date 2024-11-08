@@ -10,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_compile_options"
 		],
 		"files" : 
 		[
@@ -24,7 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 12,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
 				"parent" : 0
 			}
 		]
@@ -35,13 +48,42 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g  "
+					"fragment" : "-g -std=gnu11"
 				},
 				{
-					"fragment" : "-std=gnu11"
+					"backtrace" : 2,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 2,
+					"fragment" : "-pedantic"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-unused-variable"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-unused-parameter"
+				},
+				{
+					"backtrace" : 3,
+					"fragment" : "-Wno-unused-function"
 				}
 			],
 			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
 			"sourceIndexes" : 
 			[
 				0
@@ -58,7 +100,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-rdynamic",
+				"fragment" : "",
 				"role" : "flags"
 			}
 		],

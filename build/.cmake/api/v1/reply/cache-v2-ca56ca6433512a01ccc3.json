@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "16"
+			"value" : "30"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,23 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "3"
-		},
-		{
-			"name" : "CMAKE_COLOR_MAKEFILE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Enable/Disable color output during build."
-				}
-			],
-			"type" : "BOOL",
-			"value" : "ON"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -159,7 +143,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/g++-10"
+			"value" : "/usr/bin/g++"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -175,7 +159,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-10"
+			"value" : "/usr/bin/gcc-ar"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_RANLIB",
@@ -191,7 +175,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-10"
+			"value" : "/usr/bin/gcc-ranlib"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -287,7 +271,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-10"
+			"value" : "/usr/bin/gcc"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_AR",
@@ -303,7 +287,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ar-10"
+			"value" : "/usr/bin/gcc-ar"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER_RANLIB",
@@ -319,7 +303,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/gcc-ranlib-10"
+			"value" : "/usr/bin/gcc-ranlib"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -418,6 +402,18 @@
 			"value" : "CMAKE_DLLTOOL-NOTFOUND"
 		},
 		{
+			"name" : "CMAKE_EDIT_COMMAND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to cache edit program executable."
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/usr/bin/ccmake"
+		},
+		{
 			"name" : "CMAKE_EXECUTABLE_FORMAT",
 			"properties" : 
 			[
@@ -514,10 +510,6 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
@@ -538,6 +530,18 @@
 			"value" : ""
 		},
 		{
+			"name" : "CMAKE_FIND_PACKAGE_REDIRECTS_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake."
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/k32ar/Projects/K/build/CMakeFiles/pkgRedirects"
+		},
+		{
 			"name" : "CMAKE_GENERATOR",
 			"properties" : 
 			[
@@ -547,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "Unix Makefiles"
+			"value" : "Ninja"
 		},
 		{
 			"name" : "CMAKE_GENERATOR_INSTANCE",
@@ -619,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "1"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -647,11 +651,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Path to a program."
+					"value" : "Program used to build from build.ninja files."
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/usr/bin/make"
+			"value" : "/usr/bin/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -943,7 +947,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/share/cmake-3.16"
+			"value" : "/usr/share/cmake"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1154,6 +1158,22 @@
 			"value" : "/usr/bin/strip"
 		},
 		{
+			"name" : "CMAKE_TAPI",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a program."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "CMAKE_TAPI-NOTFOUND"
+		},
+		{
 			"name" : "CMAKE_UNAME",
 			"properties" : 
 			[
@@ -1194,6 +1214,18 @@
 			"value" : "/home/k32ar/Projects/K/build"
 		},
 		{
+			"name" : "K_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
 			"name" : "K_SOURCE_DIR",
 			"properties" : 
 			[
@@ -1204,6 +1236,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/k32ar/Projects/K"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",

@@ -6,9 +6,10 @@
 			[
 				{
 					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.0.0"
+						"string" : "3.5.0"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -38,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "K::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-K-Debug-bd5c045dca6f8ae2e32e.json",
+					"jsonFile" : "target-K-Debug-ea468ce418f242e16e07.json",
 					"name" : "K",
 					"projectIndex" : 0
 				}
@@ -54,6 +55,6 @@
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 0
+		"minor" : 7
 	}
 }
