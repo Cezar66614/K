@@ -1,6 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char *code_read(size_t *code_len, FILE *code_file) {
   char *code = NULL; *code_len = 0;
@@ -139,6 +140,37 @@ void lexer_free(char **tokens, size_t tokens_count) {
   free(tokens);
 }
 
+size_t parser_preprocessor_mode(FILE *out_file, char **tokens, size_t tokens_count) {
+  fprintf(out_file, "\n"); // Ensure own line
+
+  size_t skip = 0;
+
+  fprintf(out_file, "#"); // ++skip; WE DON'T SKIP THE FIRST TOKEN SINCE THAT IS DONE BY THE FOR THAT CALLS THIS
+
+  if (tokens_count < 2) return 0; // minimum amount needed: # include / # define
+
+  if (!strcmp(tokens[1], "include")) {
+    fprintf(out_file, "%s ", tokens[1]); ++skip;
+
+    if (tokens_count < 3) return 0; // needed or "Path", more for the <Library>
+
+    if (tokens[2][0] == '"') { fprintf(out_file, "%s\n", tokens[2]); ++skip; } // easy to skip Strings
+    else if (tokens[2][0] == '<') { // harder since we don't have it as a String
+      fprintf(out_file, "<"); ++skip;
+
+      size_t i = 3;
+      while ((i < tokens_count) && (tokens[i][0] != '>')) {
+        fprintf(out_file, "%s", tokens[i]); ++skip;
+        ++i;
+      }
+
+      fprintf(out_file, ">\n"); ++skip;
+    } else return 0; // no way to define an include this way biash
+  } else return 0;
+
+  return skip;
+}
+
 int main(int argc, char **argv) {
   if (argc == 1) return 1;
 
@@ -166,19 +198,32 @@ int main(int argc, char **argv) {
   if (src_tokens == NULL) return 1;
 
 
+  printf("Exporting to: %s\n", "out.c");
+
   FILE *dst_file = fopen("out.c", "w");
   if (dst_file == NULL) return 1;
 
-  size_t i;
+  size_t i, j;
   for (i = 0; i < src_tokens_count; ++i) {
-    printf("%s\n", src_tokens[i]);
-    fprintf(dst_file, "%s ", src_tokens[i]);
+    if (src_tokens[i][0] == '#') {
+      j = parser_preprocessor_mode(dst_file, &(src_tokens[i]), src_tokens_count - i);
+      if (j == 0) {
+        printf("Error parser_preprocessor_mode\n");
+        return 1;
+      }
+      i += j;
+    }
+    else {
+      fprintf(dst_file, "%s ", src_tokens[i]);
+    }
   }
 
   fclose(dst_file);
 
   lexer_free(src_tokens, src_tokens_count);
   src_tokens = NULL; src_tokens_count = 0;
+
+  printf("Done!\n");
 
   return 0;
 }

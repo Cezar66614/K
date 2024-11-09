@@ -48,7 +48,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " "
+					"fragment" : "-g -std=gnu99"
 				},
 				{
 					"backtrace" : 2,
@@ -73,12 +73,17 @@
 				{
 					"backtrace" : 3,
 					"fragment" : "-Wno-unused-function"
-				},
-				{
-					"fragment" : "-std=gnu11"
 				}
 			],
 			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "99"
+			},
 			"sourceIndexes" : 
 			[
 				0
@@ -90,6 +95,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"
